@@ -5,7 +5,6 @@ RUN apt-get update; \
 	apt-get install -y --no-install-recommends vim &&\
 	apt-get install -y --no-install-recommends nano &&\
 	apt-get install -y --no-install-recommends openjdk-11-jdk ca-certificates-java &&\
-	apt-get install -y --no-install-recommends hexdump &&\
     apt-get install -y --no-install-recommends ant &&\
 	apt-get install -y --no-install-recommends git-all
 
