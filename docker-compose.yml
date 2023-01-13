@@ -4,17 +4,19 @@ services:
     image: ubuntu/apache2:latest
     build:
       context: .
-    restart: always
+    restart: 'no'
     ports:
       - "8081:80"
     volumes:
-      - /projects:/home/projects
+      - ./projects:/home/projects
   #database
   db:
     image: mysql
     volumes:
-      - ./mysql_data:/var/lib/mysql
-    restart: always
+      - ./mysql_data:/var/lib/mysql      
+    restart: 'no'
+    ports:
+      - "3089:3306"
     environment:
       MYSQL_ROOT_PASSWORD: D37091vw245McCJ8
       MYSQL_DATABASE: appdb
